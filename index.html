@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>self-introduce</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- トップに戻るための目印 -->
+<div id="top-anchor"></div>
+
+<!-- ページ最上部の大きなタイトル -->
+<h1 id="main-title">This is my self-introduction site</h1>
+
+<!-- ①トップ画面 -->
+<section id="top">
+  <!-- タイトル下の3つのサイバーキューブ -->
+  <div class="title-deco-dots">
+    <div id="secret-trigger-left" class="locked" title="🔒 LOCKED"></div> 
+    <div id="secret-trigger" title="？？？"></div> 
+    <div id="secret-trigger-2" class="locked" title="🔒 LOCKED"></div> 
+  </div>
+  <h2>WELCOME TO MY PORTFOLIO</h2>
+  <p>1ヶ月で独学に挑戦中！AIを教師とし、HTMLやCSS、JSにcodepenというサイトを使い初めて触れます</p>
+</section>
+
+<!-- ②自己紹介 -->
+<section id="about">
+  <h2 id="about-title">ABOUT ME</h2>
+  <div id="about-box">
+    <p>趣味：〇〇 / 特技：〇〇</p>
+    <div id="about-hint-text"></div>
+  </div>
+</section>
+
+<!-- ③実績 -->
+<section id="works">
+  <h2>MY WORKS（自己紹介動画）</h2>
+  
+  <div class="works-container">
+    <div class="video-theater">
+      <div class="video-frame">
+        <div class="video-placeholder">
+          <div class="play-icon">▶</div>
+          <p>ZUNDAMON CHAT VIDEO</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="video-info">
+      <h3>コンセプト：「私の世界」</h3>
+      <p class="video-desc">
+        イラストメーカーで制作したオリジナルアバターにお馴染みの音声ライブラリ「ずんだもん」の声を付け、私の世界を伝える自己紹介動画です。
+      </p>
+      
+      <ul class="point-list">
+        <li><span>1.</span> テンポよい自己紹介で私の世界を想像</li>
+        <li><span>2.</span> 黒背景で見やすさを重視した編集</li>
+        <li><span>3.</span> 世界観に合わせた落ち着いたBGM</li>
+      </ul>
+      
+      <div class="tech-tag">
+        <span id="tag-1">Avatar Design</span>
+        <span id="tag-2">Zundamon Voice</span>
+        <span id="tag-3">Dark Theme Style</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④夢・志望動機 -->
+<section id="vision">
+  <h2>FUTURE VISION（将来の夢）</h2>
+  
+  <div class="cyber-board">
+    <div class="board-header">
+      <div class="status-light"></div>
+      <span class="board-title">MISSION CONTROL PANEL</span>
+    </div>
+    
+    <div class="board-body">
+      <h3>船橋情報ビジネス専門学校で叶えたいこと</h3>
+      <p class="vision-text">
+        「独学1ヶ月でサイトと動画を作り上げた行動力」をベースに、Webクリエイター科のプロの環境で、デザインの基礎から最先端のフロントエンド技術までを圧倒的なスピードで吸収します。
+      </p>
+      
+      <h3>将来のターゲット</h3>
+      <div id="quiz-container" class="hidden"></div>
+      
+      <p class="vision-text">
+        ただコードを書くだけでなく、ユーザーをアッと驚かせるギミックや、ずんだもん動画のような遊び心を仕掛けられる、唯一無二の「ハイブリッドなWebクリエイター」を目指します！
+      </p>
+    </div>
+    
+    <div class="board-footer">
+      <span class="system-msg" id="footer-version-text">READY TO LEARN // 2026_AO_CHALLENGE</span>
+    </div>
+  </div>
+</section>
+
+<!-- 🕵️‍♂️ 右下の隠し検索ボックス -->
+<div id="hidden-search-area" class="hidden">
+  <p id="search-status">> DEBUG MODE: キーワードを入力してください...</p>
+  <div class="search-flex">
+    <input type="text" id="game-search-input" placeholder="キーワードを入力..." autocomplete="off">
+    <button id="game-search-btn">CHECK</button>
+  </div>
+</div>
+
+<!-- 🎮 障壁を乗り越えるジャンプアトラクション画面 -->
+<div id="action-game-overlay" class="hidden">
+  <div id="action-game-container">
+    <h3>🏃‍♂️ OBSTACLE RUN（障壁を乗り越えろ）</h3>
+    <p style="color: #00d2ff; font-size: 12px; margin-bottom: 10px;">スペースキーか画面クリックでジャンプ！障害物を避けてゴールを目指せ！</p>
+    <div id="action-stage">
+      <div id="action-player"></div>
+    </div>
+    <div id="action-score">PROGRESS: <span id="action-score-val">0</span>%</div>
+    <div style="margin-top: 15px;">
+      <button id="action-start-btn">START</button>
+      <button id="action-close-btn">CLOSE</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🔮 3x3パターンパズル画面 -->
+<div id="pattern-overlay" class="hidden">
+  <div id="pattern-modal">
+    <h3>🔒 SYSTEM PATTERN LOCK</h3>
+    <p style="color: #00d2ff; font-size: 12px; margin-bottom: 15px;">ヒント: 「Z」の文字を描くように一筆書きでなぞれ…</p>
+    <div class="grid-3x3">
+      <div class="circle-btn" data-index="1"></div>
+      <div class="circle-btn" data-index="2"></div>
+      <div class="circle-btn" data-index="3"></div>
+      <div class="circle-btn" data-index="4"></div>
+      <div class="circle-btn" data-index="5"></div>
+      <div class="circle-btn" data-index="6"></div>
+      <div class="circle-btn" data-index="7"></div>
+      <div class="circle-btn" data-index="8"></div>
+      <div class="circle-btn" data-index="9"></div>
+    </div>
+    <div style="margin-top: 15px;">
+      <button id="pattern-reset-btn">RESET</button>
+      <button id="pattern-close-btn">CLOSE</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOPに戻る矢印ボタン -->
+<a href="#top-anchor" class="back-to-top">TOP</a>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
