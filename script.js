@@ -50,8 +50,8 @@ searchInput.value = '';
 if (code === 'ao') {
 document.getElementById('main-title').classList.add('glitch-text');
 document.getElementById('about-title').style.color = '#00d2ff';
-document.getElementById('about-hint-text').innerHTML = "挑戦中：次のパスワードは私の動画の声。緑のあいつ。大文字で「ZUNDAMON」なのだ！";
-statusText.innerText = ">> [STAGE 1 クリア] 自己紹介(ABOUT ME)エリアに異変が発生。確認せよ。";
+document.getElementById('about-hint-text').innerHTML = "挑戦中：次のパスワードは私の動画の声。緑の豆の妖精なのだ！";
+statusText.innerText = ">> [STAGE 1 クリア] ABOUT MEエリアに異変が発生。確認せよ。";
 statusText.style.color = "#39ff14";
 }
 else if (code === 'zundamon') {
@@ -87,7 +87,7 @@ trigger2.classList.remove('locked');
 trigger2.classList.add('unlocked');
 trigger2.setAttribute('title', '🔓 CLICK ME!');
 }
-statusText.innerText = ">> [STAGE 4 クリア] タイトル下の「right square」のロックが解除された！クリックして最終セキュリティを突破せよ！";
+statusText.innerText = ">> [STAGE 4 クリア] タイトル下の右の四角のロックが解除された！クリックして最終セキュリティを突破せよ！";
 statusText.style.color = "#39ff14";
 }
 else if (code === 'clear') {
@@ -95,7 +95,7 @@ document.body.style.backgroundColor = '#ffffff';
 document.body.style.color = '#0c0f12';
 document.querySelectorAll('h2').forEach(h2 => h2.style.color = '#0c0f12');
 document.getElementById('main-title').style.color = '#0c0f12';
-alert("🎉【最終裏コード解除：私の秘密の豆知識】\n\n実は！この自己紹介サイトを作っている裏側で、動画の『ずんだもん』のセリフの調声（イントネーション調整）に合計15時間以上かけてこだわり抜きました！\n\nこれにて全システム復旧。1ヶ月の独学の成果、これにて完全証明完了です！");
+alert("🎉【最終裏コード解除：私の秘密の豆知識】\n\n実は私には秘密の目標があり、それは20歳までエナジードリンクを飲まないこと！\n\nこれにて全システム復旧。1ヶ月の独学の成果、これにて完全証明完了です！");
 if (searchArea) searchArea.style.setProperty('display', 'none', 'important');
 }
 else {
